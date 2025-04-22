@@ -76,7 +76,7 @@ int main()
 		    ///calculate midpoint between random vertex and the last point in the vector
 		    ///push back the newly generated coord.
 			Vector2f lastPt = points.back();
-			int rand = rand() % 3;
+			int rand = (rand() % 3) + 1;
 
 			Vector2f vertex = vertices[rand];
 			
