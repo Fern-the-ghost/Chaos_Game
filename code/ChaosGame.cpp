@@ -68,6 +68,7 @@ int main()
 	
 		if(points.size() > 0)
 		{
+		    ///Chaos Math (done by Anna)
 		    ///generate more point(s)
 			Vector2f pt1 = vertices[0];
 			Vector2f pt2 = vertices[1];
