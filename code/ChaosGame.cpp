@@ -102,7 +102,7 @@ int main()
 		    window.draw(rect);
 		}
 		///TODO:  Draw points
-
+		//drawing code done by Fernanda 
 		window.clear();
 		for(int i = 0; i < points.size(); i++)
 		{
