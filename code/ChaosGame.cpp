@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <random>
 
 //Make the code easier to type with "using namespace"
 using namespace sf;
@@ -112,4 +113,5 @@ int main()
 		}
 		window.display();
 	}
+	return 0;
 }
