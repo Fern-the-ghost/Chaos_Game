@@ -105,10 +105,10 @@ int main()
 		window.clear();
 		for(int i = 0; i < points.size(); i++)
 		{
-			TriangleShape tri(Vector2f(10,10));
-			tri.setPosition(Vector2f(points[i].x, points[i].y));
-			tri.setFillColor(Color::Blue);
-			window.draw(tri);
+			RectangleShape rect(Vector2f(10,10));
+			rect.setPosition(Vector2f(points[i].x, points[i].y));
+			rect.setFillColor(Color::Blue);
+			window.draw(rect);
 		}
 		window.display();
 	}
