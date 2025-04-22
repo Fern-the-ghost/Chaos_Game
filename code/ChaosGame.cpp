@@ -4,7 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include <stdlib.h>
+#include <cstdlib>
 
 //Make the code easier to type with "using namespace"
 using namespace sf;
