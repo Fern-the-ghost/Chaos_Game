@@ -23,10 +23,7 @@ int main()
 
 	Font newFont;
 
-	if(!newFont.loadFromFile("Desktop/cisp400/Chaos_Game/arial.ttf"))
-	{
-		//error
-	}
+	newFont.loadFromFile("./arial.ttf");
 
 	while (window.isOpen())
 	{
