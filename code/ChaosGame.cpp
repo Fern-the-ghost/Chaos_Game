@@ -1,6 +1,7 @@
 // Include important C++ libraries here
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <SFML/System/FileInputStream.hpp>
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -20,7 +21,13 @@ int main()
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
 
-	Font newFont("arial.ttf");
+	FileInputStream file("");
+
+	Font newFont;
+	if(!newFont.openFromFile("arial.ttf"))
+	{
+		//error
+	}
 
 	while (window.isOpen())
 	{
@@ -29,13 +36,13 @@ int main()
 		Handle the players input
 		****************************************
 		*/
-		
-		Text text(newFont);
-		text.setString("Please choose three points");
-		text.setCharacterSize(50);
-		text.setFillColor(Color::Red);
-		text.setStyle(Text::Bold);
-		window.draw(text);
+		//text and font (done by Fernanda)
+		Text newText(newFont);
+		newText.setString("Please choose three points");
+		newText.setCharacterSize(50);
+		newText.setFillColor(Color::Red);
+		newText.setStyle(Text::Bold);
+		window.draw(newText);
 
 		Event event;
 		while (window.pollEvent(event))
