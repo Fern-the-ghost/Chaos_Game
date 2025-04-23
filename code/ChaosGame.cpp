@@ -66,6 +66,7 @@ int main()
 					///push back to points vector
 						points.push_back(Vector2f(event.mouseButton.x,event.mouseButton.y));
 			    	}
+					
 				}
 		    }
 		}
@@ -107,10 +108,13 @@ int main()
 		Draw
 		****************************************
 		*/
+
 		window.clear();
 		for(int i = 0; i < vertices.size(); i++)
 		{
 		    RectangleShape rect(Vector2f(10,10));
+			cout << "X: " << vertices[i].x << endl;
+			cout << "Y: " << vertices[i].y << endl;
 		    rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
 		    rect.setFillColor(Color::Blue);
 		    window.draw(rect);
