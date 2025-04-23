@@ -29,6 +29,14 @@ int main()
 		Handle the players input
 		****************************************
 		*/
+		
+		Text text(font);
+		text.setString("Please choose three points");
+		text.setCharacterSize(50);
+		text.setFillColor(Color::Red);
+		text.setStyle(Text::Bold);
+		window.draw(text);
+
 		Event event;
 		while (window.pollEvent(event))
 		{
