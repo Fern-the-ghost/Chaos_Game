@@ -21,7 +21,7 @@ int main()
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
 
-	FileInputStream file("");
+	FileInputStream file("Desktop/cisp400/Chaos_Game");
 
 	Font newFont;
 	if(!newFont.openFromFile("arial.ttf"))
