@@ -20,7 +20,7 @@ int main()
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
 
-	Font font("arial.ttf");
+	Font newFont("arial.ttf");
 
 	while (window.isOpen())
 	{
@@ -30,7 +30,7 @@ int main()
 		****************************************
 		*/
 		
-		Text text(font);
+		Text text(newFont);
 		text.setString("Please choose three points");
 		text.setCharacterSize(50);
 		text.setFillColor(Color::Red);
