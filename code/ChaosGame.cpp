@@ -21,10 +21,9 @@ int main()
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
 
-	FileInputStream file("Desktop/cisp400/Chaos_Game");
-
 	Font newFont;
-	if(!newFont.openFromFile("arial.ttf"))
+
+	if(!newFont.loadFromFile("Desktop/cisp400/Chaos_Game/arial.ttf"))
 	{
 		//error
 	}
@@ -37,11 +36,11 @@ int main()
 		****************************************
 		*/
 		//text and font (done by Fernanda)
-		Text newText(newFont);
-		newText.setString("Please choose three points");
-		newText.setCharacterSize(50);
+		Text newText("Please choose three points", newFont);
+		newText.setCharacterSize(522);
 		newText.setFillColor(Color::Red);
 		newText.setStyle(Text::Bold);
+		newText.setPosition(50,50);
 		window.draw(newText);
 
 		Event event;
