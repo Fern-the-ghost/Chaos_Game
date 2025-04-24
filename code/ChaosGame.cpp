@@ -21,9 +21,10 @@ int main()
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
 
-	//Font newFont("arial.ttf");
+	Font newFont;
 
-	//newFont.loadFromFile("./arial.ttf");
+	newFont.loadFromFile("./arial.ttf");
+
 
 	while (window.isOpen())
 	{
@@ -33,12 +34,13 @@ int main()
 		****************************************
 		*/
 		//text and font (done by Fernanda)
-		//Text newText(newFont, "Please choose three points", 75);
-		Text newText;
-		newText.setFillColor(Color::Red);
+		Text newText("Please Select three points",newFont, 50);
+		newText.setFillColor(Color::White);
 		newText.setStyle(Text::Bold);
-		newText.setPosition(50,50);
+		//newText.setPosition(50,50);
 		window.draw(newText);
+		window.display();
+
 
 		Event event;
 		while (window.pollEvent(event))
@@ -59,12 +61,12 @@ int main()
 			    	if(vertices.size() < 3)
 			    	{
 						vertices.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
-						cout << "vertices"
 			    	}
 			    	else if(points.size() == 0)
 			    	{
 					///fourth click
 					///push back to points vector
+					//Done by Fernanda
 						points.push_back(Vector2f(event.mouseButton.x,event.mouseButton.y));
 			    	}
 					
@@ -119,7 +121,7 @@ int main()
 		    window.draw(rect);
 		}
 		///TODO:  Draw points
-		//drawing code done by Fernanda 
+		//drawing code done by Anna 
 		window.clear();
 		for(int i = 0; i < points.size(); i++)
 		{
