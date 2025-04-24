@@ -33,8 +33,7 @@ int main()
 		****************************************
 		*/
 		//text and font (done by Fernanda)
-		Text newText(newFont, "Please choose three points");
-		newText.setCharacterSize(76);
+		Text newText(newFont, "Please choose three points", 75);
 		newText.setFillColor(Color::Red);
 		newText.setStyle(Text::Bold);
 		newText.setPosition(50,50);
