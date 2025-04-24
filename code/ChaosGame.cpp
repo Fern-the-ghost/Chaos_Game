@@ -21,9 +21,9 @@ int main()
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
 
-	Font newFont;
+	Font newFont("arial.ttf");
 
-	newFont.loadFromFile("./arial.ttf");
+	//newFont.loadFromFile("./arial.ttf");
 
 	while (window.isOpen())
 	{
