@@ -33,9 +33,8 @@ int main()
 		****************************************
 		*/
 		//text and font (done by Fernanda)
-		Text newText;
-		newText.SetText("Please choose three points");
-		newText.SetFont(newFont);
+		Text newText(newFont);
+		newText.setString("Please choose three points");
 		newText.setCharacterSize(76);
 		newText.setFillColor(Color::Red);
 		newText.setStyle(Text::Bold);
