@@ -123,7 +123,7 @@ int main()
 		window.clear();
 		for(int i = 0; i < points.size(); i++)
 		{
-			CircleShape tri(2.0f));
+			CircleShape tri(2.0f);
 			tri.setPosition(Vector2f(points[i]));
 			tri.setFillColor(Color::Blue);
 			window.draw(tri);
