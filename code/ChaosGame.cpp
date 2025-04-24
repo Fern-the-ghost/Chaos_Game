@@ -25,6 +25,11 @@ int main()
 
 	newFont.loadFromFile("./arial.ttf");
 
+	//text and font (done by Fernanda)
+	Text newText("Please Select three points",newFont, 50);
+	newText.setFillColor(Color::White);
+	newText.setStyle(Text::Bold);
+
 	while (window.isOpen())
 	{
 		/*
@@ -32,17 +37,6 @@ int main()
 		Handle the players input
 		****************************************
 		*/
-		//while(window.isOpen())
-		//{
-		//text and font (done by Fernanda)
-		Text newText("Please Select three points",newFont, 50);
-		newText.setFillColor(Color::White);
-		newText.setStyle(Text::Bold);
-		//newText.setPosition(50,50);
-		window.draw(newText);
-		//window.display();
-		//}
-
 
 		Event event;
 		while (window.pollEvent(event))
@@ -132,6 +126,7 @@ int main()
 			tri.setFillColor(Color::Blue);
 			window.draw(tri);
 		}
+		window.draw(newText);
 		window.display();
 	}
 	return 0;
