@@ -21,7 +21,7 @@ int main()
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
 
-	Font newFont("arial.ttf");
+	//Font newFont("arial.ttf");
 
 	//newFont.loadFromFile("./arial.ttf");
 
@@ -33,7 +33,8 @@ int main()
 		****************************************
 		*/
 		//text and font (done by Fernanda)
-		Text newText(newFont, "Please choose three points", 75);
+		//Text newText(newFont, "Please choose three points", 75);
+		Text newText;
 		newText.setFillColor(Color::Red);
 		newText.setStyle(Text::Bold);
 		newText.setPosition(50,50);
@@ -58,6 +59,7 @@ int main()
 			    	if(vertices.size() < 3)
 			    	{
 						vertices.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
+						cout << "vertices"
 			    	}
 			    	else if(points.size() == 0)
 			    	{
@@ -90,7 +92,7 @@ int main()
 		    ///calculate midpoint between random vertex and the last point in the vector
 		    ///push back the newly generated coord.
 			Vector2f lastPt = points.back();
-			int newRand = (rand() % 3) + 1;
+			int newRand = rand() % 3;
 
 			Vector2f vertex = vertices[newRand];
 			
@@ -121,10 +123,10 @@ int main()
 		window.clear();
 		for(int i = 0; i < points.size(); i++)
 		{
-			RectangleShape rect(Vector2f(10,10));
-			rect.setPosition(Vector2f(points[i].x, points[i].y));
-			rect.setFillColor(Color::Blue);
-			window.draw(rect);
+			CircleShape tri(2.0f));
+			tri.setPosition(Vector2f(points[i]));
+			tri.setFillColor(Color::Blue);
+			window.draw(tri);
 		}
 		window.display();
 	}
