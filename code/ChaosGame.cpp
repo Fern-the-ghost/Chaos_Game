@@ -34,7 +34,7 @@ int main()
 		*/
 		//text and font (done by Fernanda)
 		Text newText("Please choose three points", newFont);
-		newText.setCharacterSize(522);
+		newText.setCharacterSize(76);
 		newText.setFillColor(Color::Red);
 		newText.setStyle(Text::Bold);
 		newText.setPosition(50,50);
@@ -113,8 +113,6 @@ int main()
 		for(int i = 0; i < vertices.size(); i++)
 		{
 		    RectangleShape rect(Vector2f(10,10));
-			cout << "X: " << vertices[i].x << endl;
-			cout << "Y: " << vertices[i].y << endl;
 		    rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
 		    rect.setFillColor(Color::Blue);
 		    window.draw(rect);
